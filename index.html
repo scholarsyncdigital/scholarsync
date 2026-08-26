@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="ScholarSync - Professional Academic Digital Support for students, researchers, teachers and professionals.">
+
+    <title>
+        ScholarSync | Academic Digital Support
+    </title>
+
+
+    <style>
+
+        /* =====================================
+           GLOBAL
+        ====================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: #102a43;
+
+            background: #ffffff;
+
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+        .container {
+
+            width: 92%;
+
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+
+        /* =====================================
+           NAVBAR
+        ====================================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(255,255,255,0.97);
+
+            border-bottom:
+                1px solid #e5e7eb;
+        }
+
+        .navbar {
+
+            height: 74px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            font-size: 22px;
+
+            font-weight: 800;
+        }
+
+
+        .logo-icon {
+
+            width: 43px;
+
+            height: 43px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0c3157,
+                    #2f8f46
+                );
+
+            color: white;
+
+            font-size: 21px;
+
+            font-weight: bold;
+        }
+
+
+        .logo-text span {
+
+            color: #2f8f46;
+        }
+
+
+        .tagline-mini {
+
+            display: block;
+
+            font-size: 8px;
+
+            letter-spacing: 1px;
+
+            color: #2f8f46;
+
+            font-weight: 700;
+
+            margin-top: -3px;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+        }
+
+
+        .nav-links a {
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #344054;
+        }
+
+
+        .nav-links a:hover {
+
+            color: #2f8f46;
+        }
+
+
+        .menu-btn {
+
+            display: none;
+
+            border: none;
+
+            background: none;
+
+            font-size: 28px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================
+           BUTTONS
+        ====================================== */
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding:
+                13px
+                21px;
+
+            border-radius: 9px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .btn-primary {
+
+            background: #f28c18;
+
+            color: white;
+
+            box-shadow:
+                0 8px 20px
+                rgba(242,140,24,0.22);
+        }
+
+
+        .btn-primary:hover {
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .btn-secondary {
+
+            background: #0c3157;
+
+            color: white;
+        }
+
+
+        .btn-outline {
+
+            border:
+                1px solid
+                #cfd5dd;
+
+            background: white;
+
+            color: #102a43;
+        }
+
+
+        .btn-outline:hover {
+
+            border-color:
+                #2f8f46;
+
+            color:
+                #2f8f46;
+        }
+
+
+        /* =====================================
+           HERO
+        ====================================== */
+
+        .hero {
+
+            padding:
+                95px
+                0
+                90px;
+
+            background:
+
+                radial-gradient(
+                    circle at 85% 20%,
+                    #eaf6ec,
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    180deg,
+                    #f7faf8,
+                    #ffffff
+                );
+        }
+
+
+        .hero-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.1fr
+                0.9fr;
+
+            gap: 65px;
+
+            align-items: center;
+        }
+
+
+        .eyebrow {
+
+            display: inline-block;
+
+            padding:
+                7px
+                13px;
+
+            border-radius:
+                30px;
+
+            background:
+                #e9f4eb;
+
+            color:
+                #23713a;
+
+            font-size:
+                12px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .5px;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(
+                    43px,
+                    6vw,
+                    67px
+                );
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -2px;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .hero h1 .green {
+
+            color:
+                #2f8f46;
+        }
+
+
+        .hero h1 .orange {
+
+            color:
+                #f28c18;
+        }
+
+
+        .hero-description {
+
+            max-width:
+                650px;
+
+            font-size:
+                18px;
+
+            color:
+                #667085;
+
+            margin-bottom:
+                28px;
+        }
+
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            gap:
+                12px;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        /* =====================================
+           HERO INFO CARD
+        ====================================== */
+
+        .support-card {
+
+            background:
+                white;
+
+            padding:
+                30px;
+
+            border-radius:
+                24px;
+
+            border:
+                1px solid
+                #e3e8ee;
+
+            box-shadow:
+                0 25px 60px
+                rgba(
+                    16,
+                    24,
+                    40,
+                    .09
+                );
+        }
+
+
+        .support-card h3 {
+
+            font-size:
+                21px;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .support-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap:
+                12px;
+        }
+
+
+        .support-item {
+
+            padding:
+                18px;
+
+            border-radius:
+                14px;
+
+            background:
+                #f6f8f7;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+        }
+
+
+        .support-item small {
+
+            display:
+                block;
+
+            color:
+                #667085;
+
+            font-weight:
+                normal;
+
+            margin-top:
+                4px;
+        }
+
+
+        /* =====================================
+           SECTION
+        ====================================== */
+
+        section {
+
+            padding:
+                80px
+                0;
+        }
+
+
+        .section-title {
+
+            max-width:
+                720px;
+
+            margin:
+                0
+                auto
+                45px;
+
+            text-align:
+                center;
+        }
+
+
+        .section-title h2 {
+
+            font-size:
+                38px;
+
+            line-height:
+                1.15;
+
+            margin-bottom:
+                12px;
+        }
+
+
+        .section-title p {
+
+            color:
+                #667085;
+        }
+
+
+        /* =====================================
+           SERVICES
+        ====================================== */
+
+        .services-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                20px;
+        }
+
+
+        .service-card {
+
+            padding:
+                27px;
+
+            border:
+                1px solid
+                #e4e8ed;
+
+            border-radius:
+                18px;
+
+            background:
+                white;
+
+            transition:
+                .2s;
+        }
+
+
+        .service-card:hover {
+
+            transform:
+                translateY(
+                    -5px
+                );
+
+            box-shadow:
+                0 15px
+                35px
+                rgba(
+                    16,
+                    24,
+                    40,
+                    .08
+                );
+        }
+
+
+        .service-icon {
+
+            width:
+                52px;
+
+            height:
+                52px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                14px;
+
+            background:
+                #edf6ef;
+
+            font-size:
+                23px;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .service-card h3 {
+
+            margin-bottom:
+                8px;
+        }
+
+
+        .service-card p {
+
+            color:
+                #667085;
+
+            font-size:
+                14px;
+        }
+
+
+        /* =====================================
+           WHO WE HELP
+        ====================================== */
+
+        .audience {
+
+            background:
+                #f6f8f7;
+        }
+
+
+        .audience-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            gap:
+                18px;
+        }
+
+
+        .audience-card {
+
+            background:
+                white;
+
+            border:
+                1px solid
+                #e4e8ed;
+
+            border-radius:
+                18px;
+
+            padding:
+                27px;
+
+            text-align:
+                center;
+        }
+
+
+        .audience-icon {
+
+            font-size:
+                34px;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        .audience-card h3 {
+
+            font-size:
+                18px;
+        }
+
+
+        .audience-card p {
+
+            font-size:
+                13px;
+
+            color:
+                #667085;
+
+            margin-top:
+                5px;
+        }
+
+
+        /* =====================================
+           WHY CHOOSE US
+        ====================================== */
+
+        .why-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            gap:
+                18px;
+        }
+
+
+        .why-card {
+
+            text-align:
+                center;
+
+            padding:
+                25px;
+        }
+
+
+        .why-icon {
+
+            font-size:
+                36px;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        .why-card h3 {
+
+            font-size:
+                17px;
+
+            margin-bottom:
+                5px;
+        }
+
+
+        .why-card p {
+
+            font-size:
+                13px;
+
+            color:
+                #667085;
+        }
+
+
+        /* =====================================
+           SHOWCASE
+        ====================================== */
+
+        .showcase {
+
+            background:
+                #f8fafc;
+        }
+
+
+        .showcase-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap:
+                20px;
+        }
+
+
+        .showcase-card {
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid
+                #e4e8ed;
+
+            border-radius:
+                18px;
+
+            background:
+                white;
+        }
+
+
+        .showcase-visual {
+
+            height:
+                180px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                52px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf5ed,
+                    #fff2e5
+                );
+        }
+
+
+        .showcase-content {
+
+            padding:
+                22px;
+        }
+
+
+        .showcase-content h3 {
+
+            margin-bottom:
+                7px;
+        }
+
+
+        .showcase-content p {
+
+            font-size:
+                14px;
+
+            color:
+                #667085;
+        }
+
+
+        .tags {
+
+            display:
+                flex;
+
+            gap:
+                6px;
+
+            flex-wrap:
+                wrap;
+
+            margin-top:
+                14px;
+        }
+
+
+        .tag {
+
+            padding:
+                5px
+                9px;
+
+            background:
+                #f2f4f7;
+
+            border-radius:
+                7px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =====================================
+           PROCESS
+        ====================================== */
+
+        .process-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    1fr
+                );
+
+            gap:
+                18px;
+        }
+
+
+        .process-step {
+
+            text-align:
+                center;
+
+            padding:
+                20px;
+        }
+
+
+        .step-number {
+
+            width:
+                46px;
+
+            height:
+                46px;
+
+            border-radius:
+                50%;
+
+            margin:
+                0
+                auto
+                14px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            background:
+                #0c3157;
+
+            color:
+                white;
+
+            font-weight:
+                bold;
+        }
+
+
+        .process-step p {
+
+            color:
+                #667085;
+
+            font-size:
+                14px;
+
+            margin-top:
+                5px;
+        }
+
+
+        /* =====================================
+           CTA
+        ====================================== */
+
+        .cta-box {
+
+            padding:
+                60px
+                30px;
+
+            border-radius:
+                28px;
+
+            text-align:
+                center;
+
+            background:
+                #0c3157;
+
+            color:
+                white;
+        }
+
+
+        .cta-box h2 {
+
+            font-size:
+                36px;
+        }
+
+
+        .cta-box p {
+
+            max-width:
+                650px;
+
+            margin:
+                12px
+                auto
+                25px;
+
+            color:
+                #d9e2ec;
+        }
+
+
+        /* =====================================
+           CONTACT
+        ====================================== */
+
+        .contact-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                .85fr
+                1.15fr;
+
+            gap:
+                35px;
+        }
+
+
+        .contact-details {
+
+            display:
+                grid;
+
+            gap:
+                13px;
+
+            margin-top:
+                20px;
+        }
+
+
+        .contact-item {
+
+            padding:
+                18px;
+
+            border:
+                1px solid
+                #e4e8ed;
+
+            border-radius:
+                13px;
+        }
+
+
+        .contact-item strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                3px;
+        }
+
+
+        .contact-item span {
+
+            color:
+                #667085;
+
+            font-size:
+                14px;
+        }
+
+
+        form {
+
+            border:
+                1px solid
+                #e4e8ed;
+
+            padding:
+                27px;
+
+            border-radius:
+                20px;
+        }
+
+
+        label {
+
+            display:
+                block;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+
+            margin:
+                12px
+                0
+                6px;
+        }
+
+
+        input,
+        select,
+        textarea {
+
+            width:
+                100%;
+
+            padding:
+                12px
+                13px;
+
+            border:
+                1px solid
+                #d0d5dd;
+
+            border-radius:
+                9px;
+
+            font-family:
+                inherit;
+
+            font-size:
+                14px;
+
+            outline:
+                none;
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            border-color:
+                #2f8f46;
+        }
+
+
+        textarea {
+
+            min-height:
+                120px;
+
+            resize:
+                vertical;
+        }
+
+
+        form button {
+
+            width:
+                100%;
+
+            border:
+                none;
+
+            margin-top:
+                15px;
+        }
+
+
+        /* =====================================
+           FOOTER
+        ====================================== */
+
+        footer {
+
+            padding:
+                30px
+                0;
+
+            border-top:
+                1px solid
+                #e4e8ed;
+
+            color:
+                #667085;
+
+            font-size:
+                13px;
+        }
+
+
+        .footer-content {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+            flex-wrap:
+                wrap;
+        }
+
+
+        /* =====================================
+           MOBILE
+        ====================================== */
+
+        @media(max-width:850px) {
+
+            .nav-links {
+
+                display:
+                    none;
+
+                position:
+                    absolute;
+
+                top:
+                    74px;
+
+                left:
+                    0;
+
+                right:
+                    0;
+
+                background:
+                    white;
+
+                padding:
+                    20px;
+
+                flex-direction:
+                    column;
+
+                border-bottom:
+                    1px solid
+                    #e4e8ed;
+            }
+
+
+            .nav-links.active {
+
+                display:
+                    flex;
+            }
+
+
+            .menu-btn {
+
+                display:
+                    block;
+            }
+
+
+            .navbar >
+            .btn {
+
+                display:
+                    none;
+            }
+
+
+            .hero-grid,
+            .contact-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .services-grid,
+            .showcase-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .audience-grid,
+            .why-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .process-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+        }
+
+
+        @media(max-width:550px) {
+
+            .hero {
+
+                padding:
+                    65px
+                    0
+                    60px;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    44px;
+            }
+
+
+            .services-grid,
+            .showcase-grid,
+            .audience-grid,
+            .why-grid,
+            .process-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .section-title h2 {
+
+                font-size:
+                    30px;
+            }
+
+
+            .cta-box {
+
+                padding:
+                    42px
+                    20px;
+            }
+
+
+            .cta-box h2 {
+
+                font-size:
+                    29px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION
+=========================================== -->
+
+<header>
+
+    <div class="container navbar">
+
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                S
+            </div>
+
+            <div class="logo-text">
+
+                Scholar<span>Sync</span>
+
+                <span class="tagline-mini">
+                    ACADEMIC DIGITAL SUPPORT
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <nav class="nav-links"
+             id="navLinks">
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#audience">
+                Who We Help
+            </a>
+
+            <a href="#showcase">
+                Showcase
+            </a>
+
+            <a href="#why-us">
+                Why Us
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <a href="#contact"
+           class="btn btn-primary">
+
+            Get a Quote
+
+        </a>
+
+
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==========================================
+     HERO
+=========================================== -->
+
+<main id="home">
+
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+
+        <div>
+
+
+            <span class="eyebrow">
+
+                ACADEMIC DIGITAL SUPPORT
+
+            </span>
+
+
+
+            <h1>
+
+                Your Work.
+
+                <br>
+
+                <span class="green">
+                    Professionally
+                </span>
+
+                <br>
+
+                <span class="orange">
+                    Presented.
+                </span>
+
+            </h1>
+
+
+
+            <p class="hero-description">
+
+                ScholarSync provides professional digital
+                support for students, researchers, teachers
+                and professionals — helping you present
+                your work with clarity, quality and impact.
+
+            </p>
+
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#contact"
+                    class="btn btn-primary">
+
+                    Get a Quote
+
+                </a>
+
+
+                <a
+                    href="#services"
+                    class="btn btn-outline">
+
+                    Explore Services
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="support-card">
+
+
+            <h3>
+
+                How ScholarSync Can Help
+
+            </h3>
+
+
+
+            <div class="support-grid">
+
+
+                <div class="support-item">
+
+                    📊 Excel & Data
+
+                    <small>
+                        Data support & analysis
+                    </small>
+
+                </div>
+
+
+                <div class="support-item">
+
+                    📝 Word & Reports
+
+                    <small>
+                        Formatting & documentation
+                    </small>
+
+                </div>
+
+
+                <div class="support-item">
+
+                    📑 Presentations
+
+                    <small>
+                        Professional PPT design
+                    </small>
+
+                </div>
+
+
+                <div class="support-item">
+
+                    📈 Visualization
+
+                    <small>
+                        Charts & visual storytelling
+                    </small>
+
+                </div>
+
+
+                <div class="support-item">
+
+                    🔬 Research Support
+
+                    <small>
+                        Research & report formatting
+                    </small>
+
+                </div>
+
+
+                <div class="support-item">
+
+                    🔷 Diagrams
+
+                    <small>
+                        Technical diagrams & flowcharts
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     SERVICES
+=========================================== -->
+
+<section id="services">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Our Services
+            </h2>
+
+            <p>
+                Professional digital support to make
+                your academic and professional work
+                clear, organized and impactful.
+            </p>
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Excel & Data Support
+                </h3>
+
+                <p>
+                    Data entry, data organization,
+                    formulas, tables, charts,
+                    dashboards and more.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Word & Report Formatting
+                </h3>
+
+                <p>
+                    Professional formatting for
+                    reports, theses, assignments,
+                    documents and templates.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📑
+                </div>
+
+                <h3>
+                    PowerPoint & Presentation Design
+                </h3>
+
+                <p>
+                    Professional presentations,
+                    academic slides, infographics,
+                    animations and pitch decks.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📈
+                </div>
+
+                <h3>
+                    Data Visualization
+                </h3>
+
+                <p>
+                    Charts, graphs, dashboards and
+                    visual storytelling that make
+                    information easier to understand.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔬
+                </div>
+
+                <h3>
+                    Research & Report Support
+                </h3>
+
+                <p>
+                    Literature review organization,
+                    report structuring, formatting
+                    and professional documentation.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔷
+                </div>
+
+                <h3>
+                    Technical Diagrams & Flowcharts
+                </h3>
+
+                <p>
+                    Clear and professional technical
+                    diagrams, process flowcharts,
+                    system diagrams and visual layouts.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     WHO WE HELP
+=========================================== -->
+
+<section id="audience"
+         class="audience">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Who We Help
+            </h2>
+
+            <p>
+                Digital support tailored to different
+                academic and professional needs.
+            </p>
+
+        </div>
+
+
+
+        <div class="audience-grid">
+
+
+            <div class="audience-card">
+
+                <div class="audience-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Students
+                </h3>
+
+                <p>
+                    Assignments, reports,
+                    presentations and academic
+                    documents.
+                </p>
+
+            </div>
+
+
+
+            <div class="audience-card">
+
+                <div class="audience-icon">
+                    🔬
+                </div>
+
+                <h3>
+                    Researchers
+                </h3>
+
+                <p>
+                    Research reports, data
+                    visualization, diagrams and
+                    documentation.
+                </p>
+
+            </div>
+
+
+
+            <div class="audience-card">
+
+                <div class="audience-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    Teachers
+                </h3>
+
+                <p>
+                    Academic presentations,
+                    educational material and
+                    professional documents.
+                </p>
+
+            </div>
+
+
+
+            <div class="audience-card">
+
+                <div class="audience-icon">
+                    💼
+                </div>
+
+                <h3>
+                    Professionals
+                </h3>
+
+                <p>
+                    Reports, presentations,
+                    dashboards and professional
+                    documentation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     SHOWCASE
+=========================================== -->
+
+<section id="showcase"
+         class="showcase">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                What We Create
+            </h2>
+
+            <p>
+                A glimpse of the digital work
+                ScholarSync can help you prepare.
+            </p>
+
+        </div>
+
+
+
+        <div class="showcase-grid">
+
+
+            <div class="showcase-card">
+
+                <div class="showcase-visual">
+                    📊
+                </div>
+
+                <div class="showcase-content">
+
+                    <h3>
+                        Data Reports
+                    </h3>
+
+                    <p>
+                        Structured spreadsheets,
+                        tables, charts and dashboards
+                        for clear data presentation.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Excel
+                        </span>
+
+                        <span class="tag">
+                            Charts
+                        </span>
+
+                        <span class="tag">
+                            Dashboard
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="showcase-card">
+
+                <div class="showcase-visual">
+                    📑
+                </div>
+
+                <div class="showcase-content">
+
+                    <h3>
+                        Professional Presentations
+                    </h3>
+
+                    <p>
+                        Clean and engaging PowerPoint
+                        presentations designed for
+                        academic and professional use.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            PowerPoint
+                        </span>
+
+                        <span class="tag">
+                            Infographics
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="showcase-card">
+
+                <div class="showcase-visual">
+                    🔷
+                </div>
+
+                <div class="showcase-content">
+
+                    <h3>
+                        Diagrams & Flowcharts
+                    </h3>
+
+                    <p>
+                        Professional visual representations
+                        of systems, processes, workflows
+                        and technical concepts.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Diagrams
+                        </span>
+
+                        <span class="tag">
+                            Flowcharts
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     WHY CHOOSE US
+=========================================== -->
+
+<section id="why-us">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Why Choose ScholarSync?
+            </h2>
+
+            <p>
+                We focus on quality, clarity and
+                professional presentation.
+            </p>
+
+        </div>
+
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    High Quality Work
+                </h3>
+
+                <p>
+                    Carefully prepared and
+                    professionally formatted.
+                </p>
+
+            </div>
+
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🔒
+                </div>
+
+                <h3>
+                    Confidential & Secure
+                </h3>
+
+                <p>
+                    Your documents and information
+                    are handled responsibly.
+                </p>
+
+            </div>
+
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ⏱️
+                </div>
+
+                <h3>
+                    Timely Delivery
+                </h3>
+
+                <p>
+                    Clear timelines and
+                    dependable delivery.
+                </p>
+
+            </div>
+
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🎧
+                </div>
+
+                <h3>
+                    Dedicated Support
+                </h3>
+
+                <p>
+                    Support from requirement
+                    discussion to final delivery.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PROCESS
+=========================================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Simple & Easy Process
+            </h2>
+
+            <p>
+                Tell us what you need and
+                we'll take it from there.
+            </p>
+
+        </div>
+
+
+
+        <div class="process-grid">
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Tell Us
+                </h3>
+
+                <p>
+                    Share your requirement
+                    with us.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Discuss
+                </h3>
+
+                <p>
+                    We understand your
+                    exact requirement.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Prepare
+                </h3>
+
+                <p>
+                    We prepare and refine
+                    your requested work.
+                </p>
+
+            </div>
+
+
+
+            <div class="process-step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>
+                    Deliver
+                </h3>
+
+                <p>
+                    Receive your completed
+                    professional work.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CTA
+=========================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="cta-box">
+
+
+            <h2>
+                Your Work.
+                Professionally Presented.
+            </h2>
+
+
+            <p>
+                Let ScholarSync help you transform
+                your documents, data, presentations
+                and diagrams into clear and
+                professional deliverables.
+            </p>
+
+
+            <a
+                href="#contact"
+                class="btn btn-primary">
+
+                Get a Quote
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CONTACT
+=========================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Let's Connect
+            </h2>
+
+            <p>
+                Have a document, presentation,
+                data or diagram requirement?
+                Tell us about it.
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-grid">
+
+
+            <div>
+
+
+                <h3>
+                    Contact ScholarSync
+                </h3>
+
+
+                <!--
+                    REPLACE THESE DETAILS
+                    WITH YOUR REAL DETAILS
+                -->
+
+
+                <div class="contact-details">
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            📧 Email
+                        </strong>
+
+                        <span>
+                            scholarsync.digital@gmail.com
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            📱 WhatsApp
+                        </strong>
+
+                        <span>
+                            +91 8722538589
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            📸 Instagram
+                        </strong>
+
+                        <span>
+                            @scholarsync.digital
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+<form id="enquiryForm">
+
+    <label for="name">Name</label>
+
+    <input
+        id="name"
+        type="text"
+        placeholder="Your name">
+
+
+    <label for="contact">Email / Phone</label>
+
+    <input
+        id="contact"
+        type="text"
+        placeholder="How can we contact you?">
+
+
+    <label for="service">Service Required</label>
+
+    <select id="service">
+
+        <option value="">Select a service</option>
+
+        <option value="Excel & Data Support">
+            Excel & Data Support
+        </option>
+
+        <option value="Word & Report Formatting">
+            Word & Report Formatting
+        </option>
+
+        <option value="PowerPoint & Presentation Design">
+            PowerPoint & Presentation Design
+        </option>
+
+        <option value="Data Visualization">
+            Data Visualization
+        </option>
+
+        <option value="Research & Report Support">
+            Research & Report Support
+        </option>
+
+        <option value="Technical Diagrams & Flowcharts">
+            Technical Diagrams & Flowcharts
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+
+    <label for="message">Requirement</label>
+
+    <textarea
+        id="message"
+        placeholder="Briefly describe what you need..."></textarea>
+
+
+    <button
+        id="submitEnquiry"
+        type="button"
+        class="btn btn-primary"
+        onclick="submitScholarSyncEnquiry()">
+
+        Submit Enquiry
+
+    </button>
+
+</form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ==========================================
+     FOOTER
+=========================================== -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <span>
+            © 2026 ScholarSync.
+            All rights reserved.
+        </span>
+
+        <span>
+            Scholar Sync | Academic & Professional Digital Support
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+<script>
+
+function toggleMenu() {
+
+    document
+        .getElementById("navLinks")
+        .classList
+        .toggle("active");
+
+}
+async function submitScholarSyncEnquiry() {
+
+    const button =
+        document.getElementById("submitEnquiry");
+
+    const nameField =
+        document.getElementById("name");
+
+    const contactField =
+        document.getElementById("contact");
+
+    const serviceField =
+        document.getElementById("service");
+
+    const messageField =
+        document.getElementById("message");
+
+
+    // Check that all fields actually exist
+
+    if (
+        !button ||
+        !nameField ||
+        !contactField ||
+        !serviceField ||
+        !messageField
+    ) {
+
+        console.error(
+            "ScholarSync: One or more form fields could not be found.",
+            {
+                button: button,
+                name: nameField,
+                contact: contactField,
+                service: serviceField,
+                message: messageField
+            }
+        );
+
+        alert(
+            "There is a problem with the enquiry form. " +
+            "Please refresh the page and try again."
+        );
+
+        return;
+    }
+
+
+    // Safely read values
+
+    const name =
+        String(nameField.value || "").trim();
+
+    const contact =
+        String(contactField.value || "").trim();
+
+    const service =
+        String(serviceField.value || "").trim();
+
+    const message =
+        String(messageField.value || "").trim();
+
+
+    // Validation
+
+    if (!name) {
+
+        alert("Please enter your name.");
+
+        nameField.focus();
+
+        return;
+    }
+
+
+    if (!contact) {
+
+        alert(
+            "Please enter your email address or phone number."
+        );
+
+        contactField.focus();
+
+        return;
+    }
+
+
+    if (!service) {
+
+        alert("Please select a service.");
+
+        serviceField.focus();
+
+        return;
+    }
+
+
+    if (!message) {
+
+        alert(
+            "Please describe your requirement."
+        );
+
+        messageField.focus();
+
+        return;
+    }
+
+
+    // Show submitting immediately
+
+    button.disabled = true;
+
+    button.textContent = "Submitting...";
+
+
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbybZNov-WGC8z605qVBUIBqfc0SUAoGcUoVEn1hYR_U1-4nSjl1D_C2RXVjX2mdOEluSg/exec";
+
+
+    const enquiryData = {
+
+        name: name,
+
+        contact: contact,
+
+        service: service,
+
+        message: message
+
+    };
+
+
+    console.log(
+        "ScholarSync: Sending enquiry",
+        enquiryData
+    );
+
+
+    try {
+
+        await fetch(
+            scriptURL,
+            {
+                method: "POST",
+
+                mode: "no-cors",
+
+                headers: {
+                    "Content-Type":
+                        "text/plain;charset=utf-8"
+                },
+
+                body:
+                    JSON.stringify(enquiryData)
+            }
+        );
+
+
+        console.log(
+            "ScholarSync: Enquiry submitted"
+        );
+
+
+        // Success screen
+
+        document.getElementById(
+            "enquiryForm"
+        ).innerHTML = `
+
+            <div style="
+                text-align:center;
+                padding:40px 15px;
+            ">
+
+                <div style="
+                    font-size:52px;
+                    margin-bottom:15px;
+                ">
+                    ✅
+                </div>
+
+                <h2 style="
+                    color:#0C3157;
+                    margin-bottom:15px;
+                ">
+                    Enquiry Submitted Successfully!
+                </h2>
+
+                <p style="
+                    color:#667085;
+                    font-size:16px;
+                    line-height:1.7;
+                ">
+
+                    Thank you for contacting
+                    <strong>ScholarSync</strong>.
+
+                    <br><br>
+
+                    Our team has received your enquiry
+                    and will contact you soon.
+
+                    <br><br>
+
+                    <strong>
+                        Our team will contact you shortly.
+                    </strong>
+
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="margin-top:20px;"
+                    onclick="location.reload()">
+
+                    Submit Another Enquiry
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "ScholarSync submission error:",
+            error
+        );
+
+        button.disabled = false;
+
+        button.textContent =
+            "Submit Enquiry";
+
+        alert(
+            "Unable to submit your enquiry. " +
+            "Please try again."
+        );
+
+    }
+
+}
+
+
+</script>
+
+</body>
+
+</html>
